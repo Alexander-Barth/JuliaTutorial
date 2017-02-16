@@ -52,8 +52,24 @@ colorbar()
 
 savefig("SST_first.png")
 
+imax, jmax, kmax = size(SST)
+
 clf()
-count = 100 * squeeze(sum(!SST.na,3),3) / size(SST,3);
+count = zeros((imax,jmax))
+for j = 1:jmax
+    for i = 1:imax
+        for k = 1:kmax
+            if !SST.na[i,j,k]
+                count[i,j] = count[i,j] + 1
+            end
+        end
+
+        count[i,j] = 100*count[i,j]/kmax
+    end
+end
+
+
+count = 100 * squeeze(sum(!SST.na,3),3) / kmax;
 pcolor(lon,lat,count'), colorbar()
 savefig("Fig/SST_count.png")
 
@@ -116,22 +132,22 @@ dx = pi * 0.05 * R/180;
 dy = pi * 0.05 * R/180 * cos(pi*lat/180);
 
 #dS = dx*dy;
-#dS2 = reshape(dS,(1,217,1));
-#dS3 = repeat(dS2,inner=(327,1,384));
+#dS2 = reshape(dS,(1,jmax,1));
+#dS3 = repeat(dS2,inner=(imax,1,kmax));
 #dS3(SST <= 25 | isna(SST)) = 0;
+#area = squeeze(sum(sum(dS3,1),2),(1,2));
 
-dS = zeros(size(SST));
-for k = 1:size(SST,3)
-    for j = 1:size(SST,2)
-        for i = 1:size(SST,1)
+area = zeros((kmax,))
+for k = 1:kmax
+    for j = 1:jmax
+        for i = 1:imax
             if !isna(SST[i,j,k]) && SST[i,j,k] > 25
-                dS[i,j,k] = dx * dy[j]
+                area[k] = area[k] + dx * dy[j]
             end
         end
     end
 end
 
-area = squeeze(sum(sum(dS,1),2),(1,2));
 plot(dt,area)
 datetick(:x,"%m-%d")
 savefig("Fig/SST_area25.png")
