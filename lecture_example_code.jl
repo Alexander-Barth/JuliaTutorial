@@ -32,15 +32,16 @@ ax[:xaxis][:set_major_locator](locator)
 ax[:xaxis][:set_major_formatter](formatter)
 end
 
-if true
-    fname = "data/WesternMedSST.nc";
-    lon = ncread(fname,"lon");
-    lat = ncread(fname,"lat");
-    time = ncread(fname,"time");
-    tmp = ncread(fname,"seviri_sst");
-    SST = DataArray(tmp,tmp .== -9999.);
-    mask = ncread(fname,"mask");
-end
+
+fname = "data/WesternMedSST.nc";
+lon = ncread(fname,"lon");
+lat = ncread(fname,"lat");
+time = ncread(fname,"time");
+tmp = ncread(fname,"seviri_sst");
+fillvalue = ncgetatt(fname,"seviri_sst","_FillValue")
+SST = DataArray(tmp,tmp .== fillvalue);
+mask = ncread(fname,"mask");
+
 
 pyma(S) =  pycall(ma.array, Any, S.data, mask=S.na)
 PyPlot.pcolor(x,y,z::DataArray; kws...) = pcolor(x,y,pyma(z); kws...)
@@ -51,6 +52,10 @@ pcolor(lon,lat,SST[:,:,1]');
 colorbar()
 
 savefig("SST_first.png")
+
+imax = size(SST,1)
+jmax = size(SST,2)
+kmax = size(SST,3)
 
 imax, jmax, kmax = size(SST)
 
@@ -75,7 +80,20 @@ savefig("Fig/SST_count.png")
 
 
 clf()
+
+count = zeros((kmax,))
+for k = 1:kmax
+    for j = 1:jmax
+        for i = 1:imax
+            if !SST.na[i,j,k]
+                count[k] = count[k] + 1
+            end
+        end
+    end
+end
+
 count = squeeze(sum(sum(!SST.na,1),2),(1,2))
+
 percentage = 100 * count / sum(mask[:]);
 
 dt = [DateTime(1900,1,1) + Dates.Second(round(Int64,24*60*60*_)) for _ in time]
@@ -117,6 +135,18 @@ savefig("Fig/SST_space_mean2.png")
 
 
 clf()
+count = zeros((kmax,))
+for k = 1:kmax
+    for j = 1:jmax
+        for i = 1:imax
+            if !isna(SST[i,j,k]) && SST[i,j,k] > 25
+                count[k] = count[k] + 1
+            end
+        end
+    end
+end
+
+
 count = sum(sum(SST .> 25,1,skipna = true),2,skipna = true);
 count = squeeze(count,(1,2))
 plot(dt,count)
