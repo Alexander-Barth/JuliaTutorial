@@ -21,6 +21,8 @@ Pkg.add("NCDatasets")
 Pkg.add("PyPlot")
 Pkg.add("IJulia")
 Pkg.add("Interpolations")
+Pkg.add("PyCall")
+Pkg.add("Missings")
 ```
 
 * Editor with julia support. For example, install emacs and the file `julia-mode.el` as follows:
