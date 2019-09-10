@@ -21,6 +21,11 @@ julia:
 notifications:
   email: false
 
+addons:
+  apt: # apt-get for linux
+    packages:
+    - python3-pip
+
 install:
   - pip3 install --user matplotlib
   - pip3 install --user jupyter
