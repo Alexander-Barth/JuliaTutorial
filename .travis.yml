@@ -33,5 +33,5 @@ script: # the default script is equivalent to the following
   - julia --project --eval 'using Pkg; Pkg.instantiate();'
   - julia --project --eval 'using Pkg; Pkg.status();'
   - jupyter kernelspec list
-  - jupyter nbconvert --to notebook --execute --output tmp JuliaIntroduction.ipynb
+  - for i in JuliaIntroduction.ipynb; do jupyter nbconvert --to notebook --execute --output "${i%.ipynb}.out.ipynb" --ExecutePreprocessor.timeout=360 "$i"; done
 
