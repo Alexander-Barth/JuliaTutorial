@@ -22,8 +22,8 @@ notifications:
   email: false
 
 install:
-  - pip install matplotlib
-  - pip install jupyter
+  - pip3 install --user matplotlib
+  - pip3 install --user jupyter
 
 script: # the default script is equivalent to the following
   - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
