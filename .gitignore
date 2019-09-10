@@ -2,4 +2,4 @@
 *.jl.mem
 Manifest.toml
 *~
-
+*.html
