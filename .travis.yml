@@ -31,7 +31,11 @@ install:
   - pip3 install --user jupyter
 
 script: # the default script is equivalent to the following
+  - echo $PATH
   - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
   - julia --project --eval 'using Pkg; Pkg.instantiate();'
+  - julia --project --eval 'using IJulia'
+  - julia --project --eval 'using PyPlot'
+  - $JUPYTER kernelspec list
   - $JUPYTER nbconvert --to notebook --execute --output tmp JuliaIntroduction.ipynb
 
