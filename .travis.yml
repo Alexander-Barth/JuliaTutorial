@@ -32,6 +32,6 @@ script: # the default script is equivalent to the following
   - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
   - julia --project --eval 'using Pkg; Pkg.instantiate();'
   - julia --project --eval 'using Pkg; Pkg.status();'
-  - $JUPYTER kernelspec list
-  - $JUPYTER nbconvert --to notebook --execute --output tmp JuliaIntroduction.ipynb
+  - jupyter kernelspec list
+  - jupyter nbconvert --to notebook --execute --output tmp JuliaIntroduction.ipynb
 
