@@ -21,12 +21,9 @@ julia:
 notifications:
   email: false
 
-## uncomment and modify the following lines to manually install system packages
-addons:
-  apt: # apt-get for linux
-    packages:
-    - python3-matplotlib
-    - python3-nbconvert
+install:
+  - pip install matplotlib
+  - pip install jupyter
 
 script: # the default script is equivalent to the following
   - if [[ -a .git/shallow ]]; then git fetch --unshallow; fi
