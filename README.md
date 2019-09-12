@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/Alexander-Barth/JuliaTutorial.svg?branch=master)](https://travis-ci.org/Alexander-Barth/JuliaTutorial)
+
+
+
 # JuliaTutorial
 A brief Julia tutorial
 
