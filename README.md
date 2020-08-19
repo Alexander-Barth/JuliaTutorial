@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/Alexander-Barth/JuliaTutorial.svg?branch=master)](https://travis-ci.org/Alexander-Barth/JuliaTutorial)
-
+[![Build Status](https://travis-ci.org/Alexander-Barth/JuliaTutorial.svg?branch=master)](https://travis-ci.org/Alexander-Barth/JuliaTutorial) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Alexander-Barth/JuliaTutorial/master?filepath=Julia%20Tutorial%20of%20Data%20Analysis%20in%20Oceanography.ipynb)
 
 
 # JuliaTutorial
@@ -14,7 +13,8 @@ Required software:
 * The version control tool git. Under Debian/Ubuntu this can be done by the following programs
 
 ```bash
-sudo apt-get install git python3
+sudo apt-get update
+sudo apt-get install git python3 wget
 ```
 
 * Some Julia packages, which can be installed with these commands once you started Julia:
