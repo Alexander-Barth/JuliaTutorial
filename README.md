@@ -9,14 +9,7 @@ A brief Julia tutorial
 
 Required software:
 
-* Julia available from https://julialang.org/downloads/. The exercise is tested with the version 1.5 of Julia (on Linux).
-* The version control tool git. Under Debian/Ubuntu this can be done by the following programs
-
-```bash
-sudo apt-get update
-sudo apt-get install git python3 wget
-```
-
+* Julia available from https://julialang.org/downloads/. The exercise is tested with the version 1.5 of Julia (on Linux)
 * Some Julia packages, which can be installed with these commands once you started Julia:
 
 ```julia
@@ -28,6 +21,11 @@ Pkg.add("Interpolations")
 Pkg.add("PyCall")
 Pkg.add("Missings")
 ```
+
+
+
+## Optional
+
 
 * Editor with julia support. For example, install emacs and the file `julia-mode.el` as follows:
 
@@ -44,8 +42,6 @@ cat >> ~/.emacs <<EOF
 
 EOF
 ```
-
-### Optionally
 
 * Install a desktop launcher and icon for julia
 
