@@ -2,7 +2,13 @@
 
 
 # JuliaTutorial
-A brief Julia tutorial
+
+This is a brief Julia tutorial for oceanographers.
+
+The notebooks can either be used:
+* on the computers in the computer room (2nd floor, of the B5A building)
+* on your machine following the introductions below
+* on MyBinder.org using the link [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Alexander-Barth/JuliaTutorial/master?filepath=Julia%20Tutorial%20of%20Data%20Analysis%20in%20Oceanography.ipynb) (this can take 2 to 10 minutes to start)
 
 
 ## Setting-up your work environment
