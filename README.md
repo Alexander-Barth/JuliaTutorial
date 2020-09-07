@@ -20,6 +20,9 @@ Pkg.add("IJulia")
 Pkg.add("Interpolations")
 Pkg.add("PyCall")
 Pkg.add("Missings")
+using PyPlot
+using IJulia
+notebook()
 ```
 
 
