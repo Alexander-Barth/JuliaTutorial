@@ -6,9 +6,9 @@
 This is a brief Julia tutorial for oceanographers.
 
 These notebooks can either be used:
-* on the computers in the computer room (2nd floor, of the B5A building)
+* on the computers in the computer room (2/25, 2nd floor of the B5A building)
 * on your machine following the introductions below
-* on MyBinder.org using the link [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Alexander-Barth/JuliaTutorial/master?filepath=Julia%20Tutorial%20of%20Data%20Analysis%20in%20Oceanography.ipynb) (this can take 2 to 10 minutes to start)
+* on MyBinder.org using the link [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Alexander-Barth/JuliaTutorial/master?filepath=Julia%20Tutorial%20of%20Data%20Analysis%20in%20Oceanography.ipynb) (this can take 2 to 10 minutes to start). Do not forget to download and save your notebook and results. 
 
 
 ## Setting-up your work environment
@@ -33,7 +33,7 @@ notebook()
 
 
 
-## Optional
+## Optional (if using Linux)
 
 
 * Editor with julia support. For example, install emacs and the file `julia-mode.el` as follows:
