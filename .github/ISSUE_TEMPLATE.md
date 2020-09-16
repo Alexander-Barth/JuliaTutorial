@@ -19,4 +19,12 @@ Please provide the following information:
     * In a Julia session, paste the following commands and provide the output that you are getting.
 
 
+```julia
+ENV["IJULIA_DEBUG"]=true
+using Pkg
+Pkg.build("IJulia",verbose=true)
+using IJulia
+IJulia.notebook()
+```
 
+Providing the information for all these points helps a lot to help a user.
