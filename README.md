@@ -2,21 +2,20 @@
 
 
 # JuliaTutorial
-A brief Julia tutorial
+
+This is a brief Julia tutorial for oceanographers.
+
+These notebooks can either be used:
+* on the computers in the computer room (2/25, 2nd floor of the B5A building)
+* on your machine following the introductions below
+* on MyBinder.org using the link [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Alexander-Barth/JuliaTutorial/master?filepath=Julia%20Tutorial%20of%20Data%20Analysis%20in%20Oceanography.ipynb) (this can take 2 to 10 minutes to start). Do not forget to download and save your notebook and results. 
 
 
 ## Setting-up your work environment
 
 Required software:
 
-* Julia available from https://julialang.org/downloads/. The exercise is tested with the version 1.5 of Julia (on Linux).
-* The version control tool git. Under Debian/Ubuntu this can be done by the following programs
-
-```bash
-sudo apt-get update
-sudo apt-get install git python3 wget
-```
-
+* Julia available from https://julialang.org/downloads/. The exercise is tested with the version 1.5 of Julia (on Linux)
 * Some Julia packages, which can be installed with these commands once you started Julia:
 
 ```julia
@@ -27,7 +26,15 @@ Pkg.add("IJulia")
 Pkg.add("Interpolations")
 Pkg.add("PyCall")
 Pkg.add("Missings")
+using PyPlot
+using IJulia
+notebook()
 ```
+
+
+
+## Optional (if using Linux)
+
 
 * Editor with julia support. For example, install emacs and the file `julia-mode.el` as follows:
 
@@ -44,8 +51,6 @@ cat >> ~/.emacs <<EOF
 
 EOF
 ```
-
-### Optionally
 
 * Install a desktop launcher and icon for julia
 
