@@ -30,10 +30,11 @@ using PyPlot
 using IJulia
 notebook()
 ```
+## Preview the notebook files
 
+By following the link to [nbviewer.jupyter.org](https://nbviewer.jupyter.org/github/Alexander-Barth/JuliaTutorial/tree/master/) you see a list of all notebooks. For the example the Introduction notebook is available at https://nbviewer.jupyter.org/github/Alexander-Barth/JuliaTutorial/blob/master/JuliaIntroduction.ipynb .
 
-
-## Optional (if using Linux)
+## Optional configuration (if using Linux)
 
 
 * Editor with julia support. For example, install emacs and the file `julia-mode.el` as follows:
