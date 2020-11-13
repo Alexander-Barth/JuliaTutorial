@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Alexander-Barth/JuliaTutorial.svg?branch=master)](https://travis-ci.org/Alexander-Barth/JuliaTutorial) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Alexander-Barth/JuliaTutorial/master?filepath=Julia%20Tutorial%20of%20Data%20Analysis%20in%20Oceanography.ipynb)
+[![Build Status](https://github.com/Alexander-Barth/JuliaTutorial/workflows/CI/badge.svg)](https://github.com/Alexander-Barth/JuliaTutorial/actions) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Alexander-Barth/JuliaTutorial/master?filepath=Julia%20Tutorial%20of%20Data%20Analysis%20in%20Oceanography.ipynb)
 
 
 # JuliaTutorial

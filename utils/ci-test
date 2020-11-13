@@ -1,0 +1,29 @@
+#!/bin/bash
+
+source "${BASH_SOURCE%/*}/ci-env"
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python3 get-pip.py --user
+
+#ValueError: No template sub-directory with name 'lab' found in the following paths:
+#python3 -m pip install --user --use-feature=2020-resolver  matplotlib jupyter
+# AssertionError: wrong color format 'var(--jp-mirror-editor-variable-color)'
+# nbconvert 6.0.7 requires pygments>=2.4.1, but you'll have pygments 2.2.0 which is incompatible.
+python3 -m pip install pygments==2.4.1
+python3 -m pip install matplotlib jupyter
+
+julia --project --eval 'using Pkg; Pkg.instantiate();'
+julia --project --eval 'using Pkg; Pkg.status();'
+python3 -m jupyter kernelspec list
+
+JULIA_VERSION=$(julia --version | cut --delimiter=' ' --field=3);
+JULIA_VERSION_XY=$(echo $JULIA_VERSION | cut  --delimiter='.' --field=1,2);
+
+echo JULIA_VERSION $JULIA_VERSION $JULIA_VERSION_XY
+
+for i in *.ipynb Solution/*.ipynb; do
+   echo $i $JULIA_VERSION;
+   sed --regexp-extended --in-place "s/julia-1.[0-9]/julia-$JULIA_VERSION_XY/g" "$i";
+   sed --regexp-extended --in-place "s/Julia 1.[0-9].[0-9]/Julia $JULIA_VERSION/g" "$i";
+   python3 -m nbconvert --to html --execute --ExecutePreprocessor.timeout=360 "$i";
+done
