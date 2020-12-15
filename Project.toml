@@ -1,9 +1,13 @@
 [deps]
 DistributedArrays = "aaf54ef3-cdf8-58ed-94cc-d582ad619b94"
 FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
+FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
 IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
 Interpolations = "a98d9a8b-a2ab-59e6-89dd-64a1c18fca59"
 Missings = "e1d29d7a-bbdc-5cf2-9ac0-f12de2c33e28"
 NCDatasets = "85f8d34a-cbdd-5861-8df4-14fed0d494ab"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
 PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+VideoIO = "d6d074c3-1acf-5d4c-9a43-ef38773959a2"
