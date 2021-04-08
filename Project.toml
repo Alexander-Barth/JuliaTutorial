@@ -12,3 +12,6 @@ Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
 PyCall = "438e738f-606a-5dbb-bf0a-cddfbfd45ab0"
 PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
 VideoIO = "d6d074c3-1acf-5d4c-9a43-ef38773959a2"
+
+[compat]
+julia = "~1.6"
