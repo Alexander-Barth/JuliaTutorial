@@ -20,16 +20,20 @@ Required software:
 
 ```julia
 using Pkg
-Pkg.add("NCDatasets")
-Pkg.add("PyPlot")
-Pkg.add("IJulia")
-Pkg.add("Interpolations")
-Pkg.add("PyCall")
-Pkg.add("Missings")
-using PyPlot
-using IJulia
-notebook()
+cd("/home/abarth/Lectures/JuliaTutorial")
+using Pkg
+Pkg.activate(".")
+Pkg.instantiate()
 ```
+where you replace `"/home/abarth/Lectures/JuliaTutorial"` by the folder where you downloaded (and extracted) the notebook files. Note on Windows you need to use the blackslash as path separator a `raw` string for example `raw"C:\Users\Name\Documents\JuliaTutorial"`.
+
+
+```julia
+using IJulia
+notebook(dir = "/home/abarth/Lectures/JuliaTutorial")
+```
+
+
 ## Preview the notebook files
 
 By following the link to [nbviewer.jupyter.org](https://nbviewer.jupyter.org/github/Alexander-Barth/JuliaTutorial/tree/master/) you see a list of all notebooks. For the example the Introduction notebook is available at https://nbviewer.jupyter.org/github/Alexander-Barth/JuliaTutorial/blob/master/JuliaIntroduction.ipynb .
