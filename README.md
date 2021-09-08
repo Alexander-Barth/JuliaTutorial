@@ -15,7 +15,7 @@ These notebooks can either be used:
 
 Required software:
 
-* Julia available from https://julialang.org/downloads/. The exercise is tested with the version 1.5 of Julia. Some additional information is available here: https://github.com/gher-ulg/Documentation/wiki/Installing-Julia
+* Julia available from https://julialang.org/downloads/. The exercise is tested with the version 1.6 of Julia. Some additional information is available here: https://github.com/gher-ulg/Documentation/wiki/Installing-Julia
 * Some Julia packages, which can be installed with these commands once you started Julia:
 
 ```julia
