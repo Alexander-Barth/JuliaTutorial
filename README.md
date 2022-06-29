@@ -25,7 +25,7 @@ using Pkg
 Pkg.activate(".")
 Pkg.instantiate()
 ```
-where you replace `"/home/abarth/Lectures/JuliaTutorial"` by the folder where you downloaded (and extracted) the notebook files. Note on Windows you need to use the blackslash as path separator a `raw` string for example `raw"C:\Users\Name\Documents\JuliaTutorial"`.
+where you replace `"/home/abarth/Lectures/JuliaTutorial"` by the folder where you downloaded (and extracted) the notebook files. Note on Windows you need to use the backslash as path separator a `raw` string for example `raw"C:\Users\Name\Documents\JuliaTutorial"`.
 
 
 ```julia
