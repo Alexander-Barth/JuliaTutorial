@@ -3,7 +3,10 @@
 
 # JuliaTutorial
 
-This is a brief Julia tutorial for oceanographers.
+This is a brief Julia tutorial for oceanographers. Please consult additional tutorial like the following one if you are new to julia (or programming in general):
+
+* [An Introduction to Julia](https://www.youtube.com/watch?v=8h8rQyEpiZA) by Jane Herriman
+* [Julia language: a concise tutorial](https://syl1.gitbook.io/julia-language-a-concise-tutorial) by A. Lobianco
 
 These notebooks can either be used:
 * on the computers in the computer room (2/25, 2nd floor of the B5A building)
