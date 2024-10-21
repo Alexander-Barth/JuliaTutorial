@@ -11,8 +11,8 @@ using loops in [julia](test_running_correlation.jl) and [R](test_running_correla
 
 |        |        |   median  |  mean  |
 |--------|--------|-----------|--------|
-| julia  | 1.9.0  | 8.446 ms  |  8.403 ms  |
-| R      | 4.1.2  | 1383 ms   |  1376 ms |
+| julia  | 1.9.0  | 8.4 ms  |  8.4 ms  |
+| R      | 4.1.2  | 1383.0 ms   |  1376.0 ms |
 
 
 Results from on Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz
